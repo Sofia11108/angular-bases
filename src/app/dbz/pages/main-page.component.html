@@ -1,0 +1,15 @@
+<h1>dbz Personajes</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <dbz-list [arrayCharacter]="characters" (onDelete)="onDeleteCharacter($event)" ></dbz-list> 
+        <!-- mandar data desde el padre al hijo, entre [] el nombre de la propiedad del comp hijo que recibe la data -->
+    </div>
+    <div class="col">
+        <dbz-add-character (onNewCharacter)="onNewCharacter($event)"   ></dbz-add-character>
+    </div>
+</div>
+
+<!-- escuchar el evento cuando el comp emita algo, cuando se detecte que se emitió algo desde el comp add-charcater se llama la función del componente -->
+<!-- $event: es el valor que se emitió desde el add-character y se está pasando a otra función -->
